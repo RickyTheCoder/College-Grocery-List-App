@@ -1,9 +1,150 @@
-<mxfile host="app.diagrams.net" modified="2024-04-11T20:10:43.090Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Fri-tFAvhIcbjVSyY8oy" version="24.2.1" type="github">
+<mxfile host="app.diagrams.net" modified="2024-04-11T20:13:04.630Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36" etag="Jzw1JIPFPqqAzyh0PgWR" version="24.2.1" type="github">
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="2435" dy="1348" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2288" dy="3097" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-1" value="Person" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-181" y="-938.5" width="314" height="206" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-2" value="- name: String&lt;div&gt;- dob: String&lt;/div&gt;&lt;div&gt;- discount: Double&lt;/div&gt;&lt;div&gt;- groceryList: GroceryList&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-1">
+          <mxGeometry y="26" width="314" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-3" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-1">
+          <mxGeometry y="90" width="314" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-4" value="+ calculateDiscount(): void // Abstract method for discount calculation&amp;nbsp;&lt;div&gt;&lt;div&gt;+ startGroceryList(): boolean&lt;/div&gt;&lt;/div&gt;&lt;div&gt;+ addGroceryItemOrder(GroceryItemOrder order): boolean&lt;/div&gt;&lt;div&gt;+ getDiscountedPrice(): double&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-1">
+          <mxGeometry y="98" width="314" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-5" value="&lt;p style=&quot;margin:0px;margin-top:4px;text-align:center;&quot;&gt;&lt;i&gt;&amp;lt;&amp;lt;Interface&amp;gt;&amp;gt;&lt;/i&gt;&lt;br&gt;&lt;b&gt;Shopper&lt;/b&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;&lt;br&gt;&lt;/p&gt;&lt;hr size=&quot;1&quot; style=&quot;border-style:solid;&quot;&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ startGroceryList(): boolean&amp;nbsp; // initializes a new grocery list&lt;br&gt;+ addGroceryItemOrder(GroceryItemOrder order): boolean&amp;nbsp; &amp;nbsp;// Adds a &#39;GroceryItemOrder&#39; to the shopper&#39;s grocery list&lt;/p&gt;&lt;p style=&quot;margin:0px;margin-left:4px;&quot;&gt;+ getDiscountedPrice(): double // Returns the discounted price of the total grocery list&lt;/p&gt;" style="verticalAlign=top;align=left;overflow=fill;html=1;whiteSpace=wrap;" vertex="1" parent="1">
+          <mxGeometry x="-28" y="-1183" width="398" height="186" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-6" value="GroceryItemOrder" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="197" y="-670" width="292" height="123" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-7" value="- item: GroceryItem&lt;div&gt;- quantity: Integer&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-6">
+          <mxGeometry y="26" width="292" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-8" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-6">
+          <mxGeometry y="73" width="292" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-9" value="+ getCost(): double // calculates total cost" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-6">
+          <mxGeometry y="81" width="292" height="42" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-10" value="GroceryList" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="176.5" y="-488" width="333" height="121" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-11" value="&lt;div&gt;- orders: List&amp;lt;GroceryItemOrder&amp;gt;&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-10">
+          <mxGeometry y="26" width="333" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-12" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-10">
+          <mxGeometry y="66" width="333" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-13" value="+ add(GroceryItemOrder order): boolean // Adds an order&lt;div&gt;+ getTotalCost(): double // Calculates total cost&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-10">
+          <mxGeometry y="74" width="333" height="47" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-14" value="GroceryStore" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-281" y="-488" width="333" height="132" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-15" value="- name: String&lt;div&gt;- inventory: Map&amp;lt;String, GroceryItem&amp;gt;&amp;nbsp;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-14">
+          <mxGeometry y="26" width="333" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-16" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-14">
+          <mxGeometry y="66" width="333" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-17" value="+ addItem(GroceryItem item): void // Adds an item&lt;div&gt;+ getItem(String itemName): GroceryItem // Retrieves an item&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-14">
+          <mxGeometry y="74" width="333" height="58" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-18" value="GroceryStoreContainer" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-65.5" y="-281" width="374" height="136" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-19" value="- storeMap: Map&amp;lt;String, GroceryStore&amp;gt;&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-18">
+          <mxGeometry y="26" width="374" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-20" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-18">
+          <mxGeometry y="66" width="374" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-21" value="+ addStore(GroceryStore store): void // Adds a store&lt;div&gt;+ getStore(String name): GroceryStore // Retrieves a store&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-18">
+          <mxGeometry y="74" width="374" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-22" value="Student" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="351" y="-970" width="390" height="171" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-23" value="- idNumber: Integer&lt;div&gt;- creditHours: Integer&lt;/div&gt;&lt;div&gt;- degree: String&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-22">
+          <mxGeometry y="26" width="390" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-24" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-22">
+          <mxGeometry y="90" width="390" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-25" value="+ calculatedDiscount(): void&lt;div&gt;// addGroceryItemOrder(GroceryItemOrder order), and getDiscountedPrice() from &#39;Person&quot;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-22">
+          <mxGeometry y="98" width="390" height="73" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-26" value="GroceryItem" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-214" y="-683" width="252" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-27" value="- name: String&lt;div&gt;- unitPrice: double&lt;/div&gt;&lt;div&gt;- aisle: int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-26">
+          <mxGeometry y="26" width="252" height="64" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-28" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-26">
+          <mxGeometry y="90" width="252" height="8" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-29" value="+ getName(): String&lt;div&gt;+ getUnitPrice(): double&lt;/div&gt;&lt;div&gt;+ getAisle(): int&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-26">
+          <mxGeometry y="98" width="252" height="62" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-30" value="" style="endArrow=block;dashed=1;endFill=0;endSize=12;html=1;rounded=0;fontSize=12;curved=1;entryX=0.75;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="mABYvnKinr3YsKbWSZ4E-5" target="mABYvnKinr3YsKbWSZ4E-1">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="80" y="-916" as="sourcePoint" />
+            <mxPoint x="240" y="-916" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-31" value="Person implements &#39;shopper&#39; interface&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-203" y="-991" width="294" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-32" value="" style="endArrow=block;endSize=16;endFill=0;html=1;rounded=0;fontSize=12;curved=1;exitX=-0.003;exitY=0.324;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.006;entryY=1.003;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mABYvnKinr3YsKbWSZ4E-25" target="mABYvnKinr3YsKbWSZ4E-2">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="140" y="-916" as="sourcePoint" />
+            <mxPoint x="300" y="-916" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-33" value="Student inherits &#39;person&#39;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="153" y="-878" width="189" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-34" value="" style="endArrow=none;html=1;edgeStyle=orthogonalEdgeStyle;rounded=0;fontSize=12;startSize=8;endSize=8;curved=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="38" y="-612" as="sourcePoint" />
+            <mxPoint x="198" y="-612" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-35" value="parent" style="edgeLabel;resizable=0;html=1;align=left;verticalAlign=bottom;" connectable="0" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-34">
+          <mxGeometry x="-1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-36" value="child" style="edgeLabel;resizable=0;html=1;align=right;verticalAlign=bottom;" connectable="0" vertex="1" parent="mABYvnKinr3YsKbWSZ4E-34">
+          <mxGeometry x="1" relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-37" value="Association&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="63" y="-655" width="104" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-38" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;fontSize=12;curved=1;entryX=0.522;entryY=0.008;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="mABYvnKinr3YsKbWSZ4E-10">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="346" y="-547" as="sourcePoint" />
+            <mxPoint x="506" y="-547" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-39" value="GroceryList aggregates &#39;GroceryItemOrder&#39;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="341" y="-538" width="324" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-40" value="" style="endArrow=diamondThin;endFill=0;endSize=24;html=1;rounded=0;fontSize=12;curved=1;exitX=-0.007;exitY=0.191;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.995;entryY=0.132;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="mABYvnKinr3YsKbWSZ4E-13" target="mABYvnKinr3YsKbWSZ4E-17">
+          <mxGeometry width="160" relative="1" as="geometry">
+            <mxPoint x="29" y="-363" as="sourcePoint" />
+            <mxPoint x="124" y="-448" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-41" value="&#39;GroceryStore&quot; composes &#39;GroceryItem;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="1">
+          <mxGeometry x="-28" y="-359" width="299" height="31" as="geometry" />
+        </mxCell>
+        <mxCell id="mABYvnKinr3YsKbWSZ4E-42" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Notes:&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Shopper (Interface): Represents the interface that defines the methods for shopping behavior&lt;/li&gt;&lt;li&gt;Person: Declares &#39;calculateDiscount()&#39; to be implemented by subclasses&lt;/li&gt;&lt;li&gt;Student: Implements the &#39;calculateDIscount()&#39; method with specfic logic for the students class&amp;nbsp;&lt;/li&gt;&lt;li&gt;GroceryItem: Represents items available in grocery store&lt;/li&gt;&lt;li&gt;GroceryItemOrder: Represents an order of a specific &#39;Groceryitem&#39; and a quantity&lt;/li&gt;&lt;li&gt;GroceryList: Represents a list of &#39;GroceryItemOrder&#39; objects (shopping list)&lt;/li&gt;&lt;li&gt;GroceryStore: Represents a grocery store&lt;/li&gt;&lt;li&gt;GroceryStoreContainer: Implements a collection (&#39;Map&#39; or &#39;List&#39;) for managing and accessing &#39;GroceryStore&#39; objects by name or another identifier&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="-295" y="-87" width="729" height="215" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
