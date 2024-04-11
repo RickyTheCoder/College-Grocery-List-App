@@ -28,7 +28,7 @@ public class Course {
         this.courseTitle = courseTitle;
         this.maxEnrollment = maxEnrollment;
         this.courseCreditHours = courseCreditHours;
-        this.registeredStudents = new TreeSet<>(Comparator.comparing(Person::getFamilyName).thenComparing(Person::getGivenName));
+        this.registeredStudents = new HashSet<>();
         this.waitList = new LinkedList<>();
     }
 
@@ -94,14 +94,14 @@ public class Course {
         }
     }
 
-
-    /**
-     * unenrollStudent Method()
-     **/
     public void unenrollStudent(Student student) {
         registeredStudents.remove(student);
         if (!waitList.isEmpty()) {
             registeredStudents.add(waitList.poll());
         }
+    }
+
+    public Queue<Student> getWaitlisted() {
+        return waitList;
     }
 }
