@@ -1,12 +1,5 @@
 import java.util.*;
 
-/**
- * Andrew Rowe
- * March 24th, 2024
- * COMP 271-002
- * (M4A2) Student Course Wait Lists
- */
-
 
 public class Course {
 
@@ -82,9 +75,9 @@ public class Course {
 
 
     /**
-     * requestRegristration Method()
+     * enrollStudent Method() - Registers a student to course if available, otherwise student is placed into a waitlist.
      **/
-    public boolean requestRegistration(Student student) {
+    public boolean enrollStudent(Student student) {
         if (registeredStudents.size() < maxEnrollment) {
             registeredStudents.add(student);
             return true;
@@ -96,7 +89,8 @@ public class Course {
 
 
     /**
-     * unenrollStudent Method()
+     * unenrollStudent Method() - Removes a student from a course.  Then registers the next student on the waitlist
+     *                            (assuming the waitlisted student still wants to be registered)
      **/
     public void unenrollStudent(Student student) {
         registeredStudents.remove(student);
