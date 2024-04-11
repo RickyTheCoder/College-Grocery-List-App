@@ -1,5 +1,12 @@
 import java.util.*;
 
+/**
+ * Andrew Rowe
+ * March 24th, 2024
+ * COMP 271-002
+ * (M4A2) Student Course Wait Lists
+ */
+
 
 public class Course {
 
@@ -21,7 +28,7 @@ public class Course {
         this.courseTitle = courseTitle;
         this.maxEnrollment = maxEnrollment;
         this.courseCreditHours = courseCreditHours;
-        this.registeredStudents = new TreeSet<>(Comparator.comparing(Person::getFamilyName).thenComparing(Person::getGivenName));
+        this.registeredStudents = new HashSet<>();
         this.waitList = new LinkedList<>();
     }
 
@@ -75,9 +82,9 @@ public class Course {
 
 
     /**
-     * enrollStudent Method() - Registers a student to course if available, otherwise student is placed into a waitlist.
+     * requestRegristration Method()
      **/
-    public boolean enrollStudent(Student student) {
+    public boolean requestRegistration(Student student) {
         if (registeredStudents.size() < maxEnrollment) {
             registeredStudents.add(student);
             return true;
@@ -87,15 +94,14 @@ public class Course {
         }
     }
 
-
-    /**
-     * unenrollStudent Method() - Removes a student from a course.  Then registers the next student on the waitlist
-     *                            (assuming the waitlisted student still wants to be registered)
-     **/
     public void unenrollStudent(Student student) {
         registeredStudents.remove(student);
         if (!waitList.isEmpty()) {
             registeredStudents.add(waitList.poll());
         }
+    }
+
+    public Queue<Student> getWaitlisted() {
+        return waitList;
     }
 }

@@ -37,14 +37,14 @@ public class Admin {
         return null;
     }
 
-    public void recordCourse(String department, int id, String title, int maxEnrollment) {
-        courses.add(new Course(department, id, title, maxEnrollment));
+    public void recordCourse(String department, int id, String title, int maxEnrollment, int creditHours) {
+        courses.add(new Course(department, id, title, maxEnrollment, creditHours));
     }
 
-    public Course findCourse(String department, int id) {
+    public Course findCourse(String courseName, int courseNum) {
         for (Course course : courses) {
-            if (course.getDepartment().equals(department) &&
-                    course.getId() == id) {
+            if (course.getCourseName().equals(courseName) &&
+                    course.getCourseNum() == courseNum) {
                 return course;
             }
         }
@@ -57,7 +57,7 @@ public class Admin {
         if (student == null || course == null) {
             throw new IllegalArgumentException("Course or Student is null");
         }
-        if (course.enrollStudent(student)) {
+        if (course.requestRegistration(student)) {
             student.addCourse(course);
             return true;
         }
@@ -94,7 +94,7 @@ public class Admin {
     public List<Student> reportWaitListed() {
         Set<Student> set = new HashSet<>();
         for (Course course : courses) {
-            set.addAll(course.allWaitlisted());
+            set.addAll(course.getWaitlisted());
         }
         List<Student> res = new ArrayList<>(set);
         Collections.sort(res, new Comparator<Student>() {
