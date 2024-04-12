@@ -6,8 +6,8 @@ public class Student extends Person {
     private int id;
     private Set<Course> courses;
 
-    public Student(String familyName, String givenNames, int id) {
-        super(familyName, givenNames);
+    public Student(String familyName, String givenNames, int id, int day, int month, int year) {
+        super(familyName, givenNames, day, month, year);
         this.id = id;
         courses = new HashSet<Course>();
     }

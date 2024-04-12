@@ -1,7 +1,4 @@
-import java.util.Scanner;
-
-public class GroceryWaitListTester
-{
+public class Main {
     /*
     This is an expansion of the WaitListTester to add GroceryStore and GroceryItem objects for testing
     Version 2, making some students graduates and some undergraduates
@@ -17,29 +14,29 @@ public class GroceryWaitListTester
     {
         //Instantiate an additional collection to hold GroceryStores (or eliminate by setting stores = your collection
         GroceryStoreContainer stores = new GroceryStoreContainer();
-        createStores(stores);
+        // createStores(stores);
         //Add GroceryItems to at least two stores
-        createGroceryItems(stores);
+        // createGroceryItems(stores);
 
         // Instantiate one or two collections to hold Person and Course objects
         Admin admin = new Admin();
 
         // Create some people and students in the container
-        createPeopleAndStudents(people);
+        createPeopleAndStudents(admin);
         // Create some courses in the container
-        createCourses(courses);
+        createCourses(admin);
 
         // Enroll students by name in courses by name
-        registerStudents(courses);
+        registerStudents(admin);
         //Show current state (requirement 2a and 2b as List<String> suitable for printing)
-        System.out.println("Registered after initial registrations:\n" + courses.reportRegistrations());
-        System.out.println("Waitlisted after initial registrations:\n" + courses.reportWaitListed());
+        System.out.println("Registered after initial registrations:\n" + admin.reportRegistrations());
+        System.out.println("Waitlisted after initial registrations:\n" + admin.reportWaitListed());
 
         // Remove some courses for some students
-        dropStudents(courses);
+        dropStudents(admin);
         //Show current state again
-        System.out.println("Registered after some drop:\n" + courses.reportRegistrations());
-        System.out.println("Waitlisted after some drop:\n" + courses.reportWaitListed());
+        System.out.println("Registered after some drop:\n" + admin.reportRegistrations());
+        System.out.println("Waitlisted after some drop:\n" + admin.reportWaitListed());
     }
 
     /*
@@ -48,7 +45,7 @@ public class GroceryWaitListTester
     Assumes containers are "expert patters" and responsible for creating the Course and Student objects
         so they can keep track of them, provide searches, etc.
      */
-    public static void createPeopleAndStudents(Registry r){
+    public static void createPeopleAndStudents(Admin r){
         // 11 Students and 2 People who are not students  (be sure you allow both using Person inheritance)
         // Assumed parameters familyName, givenNameS, studentID, day, month, year (of birth)
         // Person has no ID
@@ -70,14 +67,14 @@ public class GroceryWaitListTester
         r.recordStudent("Custis","Martha Parke \"Patsy\"", 1000011, 4, 8, 2006);
         r.recordPerson("Henry","Patrick", 9, 5, 190);
     }
-    public static void createCourses(Locus c) {
+    public static void createCourses(Admin c) {
         // 3 courses
         // Assumed parameters departmentName, courseNumber, courseTitle, maxCapacity
-        c.recordCourse("COMP", 170, "Intro to OOP", 3);
-        c.recordCourse("COMP", 271, "Data Structures I", 5);
-        c.recordCourse("COMP", 272, "Data Structures II", 3);
+        c.recordCourse("COMP", 170, "Intro to OOP", 3, 3);
+        c.recordCourse("COMP", 271, "Data Structures I", 5, 3);
+        c.recordCourse("COMP", 272, "Data Structures II", 3, 3);
     }
-    public static void registerStudents(Locus c){
+    public static void registerStudents(Admin c){
         c.enrollStudent("Quincy","Elizabeth", "COMP", 170);
         c.enrollStudent("Quincy","Elizabeth", "COMP", 271);
         c.enrollStudent("Quincy","Elizabeth", "COMP", 272);
@@ -98,7 +95,7 @@ public class GroceryWaitListTester
 		 */
     }
 
-    public static void dropStudents(Locus c){
+    public static void dropStudents(Admin c){
         c.removeStudent("Smith","Abigail", "COMP", 170 );	//in no courses, should do nothing
         c.removeStudent("Washington","George", "COMP", 170 );	//registered but not this course, should do nothing
         c.removeStudent("Custis","Martha Dandridge", "COMP", 271 );	//remove, no wait list present
@@ -110,11 +107,11 @@ public class GroceryWaitListTester
 		 */
     }
 
-    public static void createStores(AvailableStores s) {
+    public static void createStores(GroceryStoreContainer s) {
         s.recordStore("Jewel Roger's Park");
         s.recordStore("Mariano's Evanston");
     }
-    public static void createGroceryItems(AvailableStores s){
+    public static void createGroceryItems(GroceryStoreContainer s){
         // Give all stores some GroceryItems
         // Assumes there is a way to get all GroceryStores in an interable form
         //kludge to set up some different priced items for each of first two stores

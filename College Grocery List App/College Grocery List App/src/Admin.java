@@ -9,12 +9,20 @@ public class Admin {
         courses = new HashSet<Course>();
     }
 
-    public void recordPerson(String familyName, String givenNames) {
-        people.add(new Person(familyName, givenNames));
+    public void recordPerson(String familyName, String givenNames, int day, int month, int year) {
+        people.add(new Person(familyName, givenNames, day, month, year));
     }
 
-    public void recordStudent(String familyName, String givenNames, int id) {
-        people.add(new Student(familyName, givenNames, id));
+    public void recordStudent(String familyName, String givenNames, int id, int day, int month, int year) {
+        people.add(new Student(familyName, givenNames, id, day, month, year));
+    }
+
+    public void recordUnderGradStudent(String familyName, String givenNames, int id, int day, int month, int year) {
+        people.add(new UnderGradStudent(familyName, givenNames, id, day, month, year));
+    }
+
+    public void recordGradStudent(String familyName, String givenNames, int id, int day, int month, int year) {
+        people.add(new GraduateStudent(familyName, givenNames, id, day, month, year));
     }
 
     public Person findPerson(String familyName, String givenNames) {
