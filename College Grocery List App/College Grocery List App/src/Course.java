@@ -1,13 +1,5 @@
 import java.util.*;
 
-/**
- * Andrew Rowe
- * March 24th, 2024
- * COMP 271-002
- * (M4A2) Student Course Wait Lists
- */
-
-
 public class Course {
 
     private String courseName;                 // e.g., COMP
@@ -82,7 +74,7 @@ public class Course {
 
 
     /**
-     * requestRegristration Method()
+     * requestRegristration Method() -
      **/
     public boolean requestRegistration(Student student) {
         if (registeredStudents.size() < maxEnrollment) {
