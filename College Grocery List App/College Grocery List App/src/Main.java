@@ -52,20 +52,20 @@ public class Main {
 
         // Your container class collection can ignore some of these parameters and adjust as needed to use your
         // Person and Student constructors
-        r.recordPerson("Smith","Adam", 1, 12, 1984);
-        r.recordStudent("Quincy","Elizabeth", 1000001, 12, 1, 1990);
-        r.recordUnderGradStudent("Smith","Betsey", 1000002, 10, 3, 2000);
-        r.recordUnderGradStudent("Smith","Mary", 1000003, 1, 10, 2003);
-        r.recordUnderGradStudent("Smith","Abigail", 1000004, 21, 8, 2005);
-        r.recordGradStudent("Franklin","Benjamin", 1000005, 19, 3, 2020);
-        r.recordGradStudent("Washington","George", 1000006, 2, 11, 1984);
-        r.recordGradStudent("Custis","Daniel Parke", 1000007, 12, 12, 1980);
+        r.recordPerson("Smith","Adam", 1, 12, 1984, true);
+        r.recordStudent("Quincy","Elizabeth", 1000001, 12, 1, 1990, false);
+        r.recordUnderGradStudent("Smith","Betsey", 1000002, 10, 3, 2000, false);
+        r.recordUnderGradStudent("Smith","Mary", 1000003, 1, 10, 2003, false);
+        r.recordUnderGradStudent("Smith","Abigail", 1000004, 21, 8, 2005, false);
+        r.recordGradStudent("Franklin","Benjamin", 1000005, 19, 3, 2020, true);
+        r.recordGradStudent("Washington","George", 1000006, 2, 11, 1984, true);
+        r.recordGradStudent("Custis","Daniel Parke", 1000007, 12, 12, 1980, true);
 
-        r.recordStudent("Custis","Martha Dandridge", 1000008, 29, 11, 1984);
-        r.recordStudent("Custis","Daniel Parke Jr", 1000009, 2, 12, 2003);
-        r.recordStudent("Custis","Adam Parke", 1000010, 10, 1, 2004);
-        r.recordStudent("Custis","Martha Parke \"Patsy\"", 1000011, 4, 8, 2006);
-        r.recordPerson("Henry","Patrick", 9, 5, 190);
+        r.recordStudent("Custis","Martha Dandridge", 1000008, 29, 11, 1984, false);
+        r.recordStudent("Custis","Daniel Parke Jr", 1000009, 2, 12, 2003, true);
+        r.recordStudent("Custis","Adam Parke", 1000010, 10, 1, 2004, true);
+        r.recordStudent("Custis","Martha Parke \"Patsy\"", 1000011, 4, 8, 2006, false);
+        r.recordPerson("Henry","Patrick", 9, 5, 190, true);
     }
     public static void createCourses(Admin c) {
         // 3 courses
