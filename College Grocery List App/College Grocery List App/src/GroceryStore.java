@@ -15,6 +15,11 @@ public class GroceryStore {
         inventory.put(item.getName(), item);
     }
 
+    public void addItem(String name, double price, String location) {
+        GroceryItem item = new GroceryItem(name, price, location);
+        inventory.put(item.getName(), item);
+    }
+
     // Retrieve a grocery item from the store's inventory by name
     public GroceryItem getItem(String itemName) {
         return inventory.get(itemName);

@@ -1,9 +1,9 @@
 public class GroceryItem {
     private final String name;
     private final double unitPrice;
-    private final int aisle;
+    private final String aisle;
 
-    public GroceryItem(String name, double unitPrice, int aisle) {
+    public GroceryItem(String name, double unitPrice, String aisle) {
         this.name = name;
         this.unitPrice = unitPrice;
         this.aisle = aisle;
@@ -18,7 +18,7 @@ public class GroceryItem {
         return unitPrice;
     }
 
-    public int getAisle() {
+    public String getAisle() {
         return aisle;
     }
 }
