@@ -44,6 +44,18 @@ public class Person implements Shopper {
         children.add(child);
     }
 
+    public Person getFather() {
+        return father;
+    }
+
+    public Person getMother() {
+        return mother;
+    }
+
+    public List<Person> getChildren() {
+        return children;
+    }
+
     public String getGivenNames() {
         return givenNames;
     }
