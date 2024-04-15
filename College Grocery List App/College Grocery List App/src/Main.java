@@ -1,3 +1,7 @@
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Scanner;
+
 public class Main {
     /*
     This is an expansion of the WaitListTester to add GroceryStore and GroceryItem objects for testing
@@ -37,6 +41,120 @@ public class Main {
         //Show current state again
         System.out.println("Registered after some drop:\n" + admin.reportRegistrations());
         System.out.println("Waitlisted after some drop:\n" + admin.reportWaitListed());
+
+        addParentsAndChildren(admin);
+
+        terminal(admin);
+    }
+
+    public static void terminal(Admin admin) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Welcome to children program!");
+        System.out.print("Enter the family name of the person you're looking for: ");
+        String familyName = sc.nextLine();
+        System.out.print("Enter the given names of the person you're looking for: ");
+        String givenNames = sc.nextLine();
+        Person person = admin.findPerson(familyName, givenNames);
+        if (person == null) {
+            System.out.println("Person not found");
+            return;
+        }
+        System.out.println("1. add a Father");
+        System.out.println("2. add a Mother");
+        System.out.println("3. add a Child");
+        System.out.println("4. print lineage");
+        System.out.println("5. exit");
+        System.out.print("Please select the option: ");
+        int option = sc.nextInt();
+        if (option == 1) {
+            addFather(admin, person, sc);
+        } else if (option == 2) {
+            addMother(admin, person, sc);
+        } else if (option == 3) {
+            addChild(admin, person, sc);
+        } else if (option == 4) {
+            receipt(person);
+        } else if (option == 5){
+            return;
+        } else {
+            System.out.println("Please select a valid option");
+        }
+        terminal(admin);
+    }
+
+    public static void addFather(Admin admin, Person person, Scanner sc) {
+        sc.nextLine();
+        System.out.print("Please enter the family name of the father: ");
+        String familyName = sc.nextLine();
+        System.out.print("Please enter the given name of the father: ");
+        String givenNames = sc.nextLine();
+        person.addFather(admin.findPerson(familyName, givenNames));
+        if (person.getFather() != null) {
+            System.out.println(person.getFather() + " added successfully!");
+        } else {
+            System.out.println("Father not found!");
+        }
+    }
+
+    public static void addMother(Admin admin, Person person, Scanner sc) {
+        sc.nextLine();
+        System.out.print("Please enter the family name of the mother: ");
+        String familyName = sc.nextLine();
+        System.out.print("Please enter the given name of the mother: ");
+        String givenNames = sc.nextLine();
+        person.addMother(admin.findPerson(familyName, givenNames));
+        if (person.getMother() != null) {
+            System.out.println(person.getMother() + " added successfully!");
+        } else {
+            System.out.println("Mother not found!");
+        }
+    }
+
+    public static void addChild(Admin admin, Person person, Scanner sc) {
+        sc.nextLine();
+        System.out.println("Please enter the family name of the partner: ");
+        String familyName = sc.nextLine();
+        System.out.println("Please enter the given names of the partner: ");
+        String givenNames = sc.nextLine();
+        Person partner = admin.findPerson(familyName, givenNames);
+        if (partner == null) {
+            System.out.println("Partner not found!");
+            return;
+        }
+        System.out.println("Please enter the name of the child: ");
+        String name = sc.nextLine();
+        System.out.println("Please enter the day: ");
+        int day = sc.nextInt();
+        System.out.println("Please enter the month: ");
+        int month = sc.nextInt();
+        System.out.println("Please enter the year: ");
+        int year = sc.nextInt();
+        System.out.println("Enter the sex (1 for male, 0 for female): ");
+        int sex = sc.nextInt();
+        boolean isMale = sex == 1;
+        person.addChild(name, day, month, year, isMale, partner);
+        System.out.println("Child added successfully!");
+        receipt(person);
+    }
+
+    public static void receipt(Person person) {
+        List<Person> paternal = new ArrayList<>();
+        List<Person> maternal = new ArrayList<>();
+        List<Person> children = new ArrayList<>();
+        Person pointer = person;
+        while (pointer.getFather() != null) {
+            paternal.add(pointer.getFather());
+            pointer = pointer.getFather();
+        }
+        pointer = person;
+        while (pointer.getMother() != null) {
+            maternal.add(pointer.getMother());
+            pointer = pointer.getMother();
+        }
+        children = person.getChildren();
+        System.out.println("Paternal line: " + paternal);
+        System.out.println("Maternal line: " + maternal);
+        System.out.println("Children: " + children);
     }
 
     /*
@@ -105,6 +223,16 @@ public class Main {
 		271 [Elizabeth,George] wait [ ]
 		272 [Elizabeth, Benjamin, Adam] wait [ ]
 		 */
+    }
+
+    public static void addParentsAndChildren(Admin admin) {
+        Person adamSmith = admin.findPerson("Smith", "Adam");
+        adamSmith.addFather(new Person("Smith", "John", 1, 1, 1800, true));
+        adamSmith.getFather().addFather(new Person("Smith", "Joe", 1, 1, 1775, true));
+        adamSmith.addMother(new Person("Adams", "Elizebeth", 1, 1, 1800, false));
+        adamSmith.getMother().addMother(new Person("Perry", "Elizebeth", 1, 1, 1775, false));
+        admin.recordPerson("Smith", "Mother", 1, 1, 1825, false);
+        adamSmith.addChild("Child1", 15, 4, 2024, false, admin.findPerson("Smith", "Mother"));
     }
 
     public static void createStores(GroceryStoreContainer s) {
