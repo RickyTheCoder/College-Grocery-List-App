@@ -9,7 +9,7 @@ public class Professor extends Person {
 
     /**
      *
-     * Add discount method for professor...even though doesn't get one
+     * Add discount method for professor...even though doesn't get one.
      *
      */
 
