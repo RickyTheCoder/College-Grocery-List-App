@@ -64,6 +64,15 @@ public class Person implements Shopper {
         return familyName;
     }
 
+    public int compareTo(Person other) {
+        return familyName.compareTo(other.getFamilyName());
+    }
+
+    public boolean equals(Person other) {
+        return familyName.equals(other.getFamilyName()) &&
+                givenNames.equals(other.getGivenNames());
+    }
+
     public String toString() {
         return "Person(familyName=" + familyName + ", givenNames=" + givenNames + ")";
     }
