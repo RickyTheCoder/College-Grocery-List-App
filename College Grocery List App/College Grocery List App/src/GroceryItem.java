@@ -17,8 +17,4 @@ public class GroceryItem {
     public double getUnitPrice() {
         return unitPrice;
     }
-
-    public String getAisle() {
-        return aisle;
-    }
 }
