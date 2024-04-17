@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.TreeSet;
 
 public class Person implements Shopper {
     private String familyName;
@@ -53,6 +55,12 @@ public class Person implements Shopper {
     }
 
     public List<Person> getChildren() {
+        children.sort(new Comparator<Person>() {
+            @Override
+            public int compare(Person o1, Person o2) {
+                return o1.getFamilyName().compareTo(o2.getFamilyName());
+            }
+        });
         return children;
     }
 
@@ -62,15 +70,6 @@ public class Person implements Shopper {
 
     public String getFamilyName() {
         return familyName;
-    }
-
-    public int compareTo(Person other) {
-        return familyName.compareTo(other.getFamilyName());
-    }
-
-    public boolean equals(Person other) {
-        return familyName.equals(other.getFamilyName()) &&
-                givenNames.equals(other.getGivenNames());
     }
 
     public String toString() {
