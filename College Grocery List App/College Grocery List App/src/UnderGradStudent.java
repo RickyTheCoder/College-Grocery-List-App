@@ -3,12 +3,6 @@ public class UnderGradStudent extends Student {
         super(familyName, givenNames, id, day, month, year, isMale);
     }
 
-    /**
-     *
-     * Add 10% discount method for undergrad student
-     *
-     */
-    public int undergradDiscount() {
-
-    }
+    // Add 10% discount method for undergrad student
+    public double undergradDiscount = .9;
 }

@@ -3,12 +3,6 @@ public class AtLarge extends Student{
         super(familyName, givenNames, id, day, month, year, isMale);
     }
 
-    /**
-     *
-     * Add discount method for atlarge student...even though doesn't get one (multiply by 1)
-     *
-     */
-    public int atLargeDiscount() {
-
-    }
+    // No discount given
+    private int atLargeDiscount = 1;
 }

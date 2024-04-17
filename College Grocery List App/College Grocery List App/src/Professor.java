@@ -7,12 +7,6 @@ public class Professor extends Person {
 
     }
 
-    /**
-     *
-     * Add discount method for professor...even though doesn't get one (multiply by 1)
-     *
-     */
-    public int professorDiscount() {
-
-    }
+    // No discount given
+    public int professorDiscount = 1;
 }
