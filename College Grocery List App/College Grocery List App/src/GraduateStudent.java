@@ -4,5 +4,5 @@ public class GraduateStudent extends Student {
     }
 
     // Add 15% discount method for graduate student
-    public double graduateDiscount = .85;
+    private final double graduateDiscount = .85;
 }

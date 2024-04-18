@@ -8,5 +8,5 @@ public class Professor extends Person {
     }
 
     // No discount given
-    public int professorDiscount = 1;
+    private final int professorDiscount = 1;
 }
