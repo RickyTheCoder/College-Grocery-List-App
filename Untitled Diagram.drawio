@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2024-04-18T15:34:04.856Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:124.0) Gecko/20100101 Firefox/124.0" etag="LcvumR6VtTITW0qZ8zYk" version="24.2.5" type="github" pages="4">
+<mxfile host="app.diagrams.net" modified="2024-04-21T20:06:47.492Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:124.0) Gecko/20100101 Firefox/124.0" etag="AsMBbDWCiEfyB0HvK_Bm" version="24.2.5" type="github" pages="4">
   <diagram id="igU_RN5JDobZM15hZg9m" name="Overview UML">
     <mxGraphModel dx="1642" dy="763" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
@@ -321,7 +321,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_r58iPrNLo5zozWxOhkU" name="Detailed UML">
-    <mxGraphModel dx="7127" dy="2290" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+    <mxGraphModel dx="3756" dy="762" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -429,7 +429,7 @@
           <mxGeometry y="140" width="275" height="60" as="geometry" />
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-34" value="Admin (container)" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
-          <mxGeometry x="-415" y="938" width="230" height="280" as="geometry" />
+          <mxGeometry x="-415" y="938" width="230" height="270" as="geometry" />
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-35" value="&lt;div&gt;- people: HashSet&amp;lt;Person&amp;gt;&lt;/div&gt;&lt;div&gt;- courses: HashSet&amp;lt;Course&amp;gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-34">
           <mxGeometry y="26" width="230" height="44" as="geometry" />
@@ -437,8 +437,8 @@
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-36" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-34">
           <mxGeometry y="70" width="230" height="8" as="geometry" />
         </mxCell>
-        <mxCell id="YkPzB4DwqG3yCwCXZc-5-37" value="&lt;div&gt;+ recordPerson()&lt;/div&gt;&lt;div&gt;+ recordStudent()&lt;/div&gt;&lt;div&gt;+ recordUnderGradStudent()&lt;/div&gt;&lt;div&gt;+ recordGradStudent()&lt;/div&gt;&lt;div&gt;+ recordAtLarge() // DO WE NEED????&lt;br&gt;&lt;/div&gt;&lt;div&gt;+ findPerson()&lt;/div&gt;&lt;div&gt;+ findStudent()&lt;/div&gt;&lt;div&gt;+ recordCourse()&lt;/div&gt;&lt;div&gt;+ findCourse()&lt;/div&gt;&lt;div&gt;+ enrollStudent()&lt;/div&gt;&lt;div&gt;+ removeStudent()&lt;/div&gt;&lt;div&gt;+ reportRegistrations()&lt;/div&gt;&lt;div&gt;+ reportWaitListed()&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-34">
-          <mxGeometry y="78" width="230" height="202" as="geometry" />
+        <mxCell id="YkPzB4DwqG3yCwCXZc-5-37" value="&lt;div&gt;+ recordPerson()&lt;/div&gt;&lt;div&gt;+ recordStudent()&lt;/div&gt;&lt;div&gt;+ recordUnderGradStudent()&lt;/div&gt;&lt;div&gt;+ recordGradStudent()&lt;/div&gt;&lt;div&gt;+ findPerson()&lt;/div&gt;&lt;div&gt;+ findStudent()&lt;/div&gt;&lt;div&gt;+ recordCourse()&lt;/div&gt;&lt;div&gt;+ findCourse()&lt;/div&gt;&lt;div&gt;+ enrollStudent()&lt;/div&gt;&lt;div&gt;+ removeStudent()&lt;/div&gt;&lt;div&gt;+ reportRegistrations()&lt;/div&gt;&lt;div&gt;+ reportWaitListed()&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-34">
+          <mxGeometry y="78" width="230" height="192" as="geometry" />
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-38" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Notes:&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;ol&gt;&lt;li&gt;Shopper (Interface): Represents the interface that defines the methods for shopping behavior&lt;/li&gt;&lt;li&gt;Person: Declares &#39;calculateDiscount()&#39; to be implemented by subclasses&lt;/li&gt;&lt;li&gt;Student: Implements the &#39;calculateDIscount()&#39; method with specfic logic for the students class&amp;nbsp;&lt;/li&gt;&lt;li&gt;GroceryItem: Represents items available in grocery store&lt;/li&gt;&lt;li&gt;GroceryItemOrder: Represents an order of a specific &#39;Groceryitem&#39; and a quantity&lt;/li&gt;&lt;li&gt;GroceryList: Represents a list of &#39;GroceryItemOrder&#39; objects (shopping list)&lt;/li&gt;&lt;li&gt;GroceryStore: Represents a grocery store&lt;/li&gt;&lt;li&gt;GroceryStoreContainer: Implements a collection (&#39;Map&#39; or &#39;List&#39;) for managing and accessing &#39;GroceryStore&#39; objects by name or another identifier&lt;/li&gt;&lt;/ol&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="-2173.5" y="1480" width="760" height="200" as="geometry" />
@@ -711,17 +711,17 @@
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-95" value="" style="endArrow=open;html=1;endSize=12;startArrow=diamondThin;startSize=14;startFill=0;edgeStyle=orthogonalEdgeStyle;align=left;verticalAlign=bottom;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;sketch=1;curveFitting=1;jiggle=2;" edge="1" parent="1" target="YkPzB4DwqG3yCwCXZc-5-30">
           <mxGeometry x="-1" y="3" relative="1" as="geometry">
-            <mxPoint x="-339" y="1220" as="sourcePoint" />
+            <mxPoint x="-338" y="1210" as="sourcePoint" />
             <mxPoint x="-340" y="1321" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-96" value="has a" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;curveFitting=1;jiggle=2;" connectable="0" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-95">
           <mxGeometry x="-0.0573" y="1" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="8" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-97" value="1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
-          <mxGeometry x="-375" y="1218" width="30" height="30" as="geometry" />
+          <mxGeometry x="-365" y="1210" width="30" height="30" as="geometry" />
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-98" value="0...n" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;sketch=1;curveFitting=1;jiggle=2;" vertex="1" parent="1">
           <mxGeometry x="-330" y="1300" width="50" height="30" as="geometry" />
@@ -767,7 +767,7 @@
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-104" value="teaches a&amp;nbsp;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];sketch=1;hachureGap=4;jiggle=2;curveFitting=1;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;" connectable="0" vertex="1" parent="YkPzB4DwqG3yCwCXZc-5-103">
           <mxGeometry x="0.1996" y="-5" relative="1" as="geometry">
-            <mxPoint as="offset" />
+            <mxPoint x="64" y="-5" as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="YkPzB4DwqG3yCwCXZc-5-105" value="&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;Andrew Rowe&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp; Evan Polk&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp; Ricky Rivera&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp; April 21st, 2024&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp; COMP 271-002&lt;/b&gt;&lt;/div&gt;&lt;div align=&quot;center&quot;&gt;&lt;b&gt;&amp;nbsp; (M8A1) Captsone Team Completion&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" style="verticalAlign=top;align=center;overflow=fill;html=1;whiteSpace=wrap;hachureGap=4;fontFamily=Architects Daughter;fontSource=https%3A%2F%2Ffonts.googleapis.com%2Fcss%3Ffamily%3DArchitects%2BDaughter;sketch=1;curveFitting=1;jiggle=2;rounded=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
@@ -780,7 +780,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="prtHgNgQTEPvFCAcTncT" name="Page-1">
-    <mxGraphModel dx="2305" dy="3025" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="2305" dy="3062" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
